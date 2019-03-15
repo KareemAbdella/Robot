@@ -89,18 +89,22 @@ def Hand2():
 def The_WallE_Robot():
     # CoOrd()
     leg()
-    body()
-    Hand()
-    # TO DRAW THE LEFT HALF
+    #TO DRAW THE LEFT LEG
     glRotate(180, 0, 1, 0)
     leg()
+    glRotate(-180, 0, 1, 0)
+    body()
+    Hand()
+    #TO DRAW THE LEFT HAND
+    glRotate(180, 0, 1, 0)
     Hand()
     glRotate(-180, 0, 1, 0)
+
     Head()
 
 
 glutInit()
-glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
+glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA)
 glutInitWindowSize(600, 600)
 glutCreateWindow(b"Robot By Kareem Abdella")
 glutDisplayFunc(draw)
